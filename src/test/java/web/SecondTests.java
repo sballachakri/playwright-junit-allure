@@ -4,8 +4,16 @@ import io.qameta.allure.Step;
 import org.junit.jupiter.api.*;
 
 //@TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class SearchTests {
+public class SecondTests {
 
+    //https://www.demoblaze.com/
+
+    //https://formy-project.herokuapp.com/
+
+    //api ---https://reqres.in/api-docs/#/default/get_users__id_
+    //curl -X 'GET' \
+    //  'https://reqres.in/api/users/4' \
+    //  -H 'accept: application/json'
 
     @BeforeAll
     @DisplayName("Before All")
@@ -58,4 +66,5 @@ public class SearchTests {
         System.out.println("calling third step ");
 
     }
-}
+
+    }
