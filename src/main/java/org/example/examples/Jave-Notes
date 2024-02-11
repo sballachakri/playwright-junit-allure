@@ -1,0 +1,36 @@
+interface vs abstract class vs concrete class
+
+interface - no implementation - Servlets
+abstract class - partial implementation - HttpServlet
+concrete class - if have implementation completely
+
+
+**constructor purpose is not to create objects to perform initialization of objects.
+
+** new keyword is responsible to create object.
+** whenever we create an object a new copy is created.
+
+
+Object:
+
+
+
+
+
+1. Java file can contain many classes.
+2. When compiled each class will be converted to .class file
+3. When there is no public class then the .java file can have any name.
+4. At most one public class in a java file
+5. If a public class exists then the name of the java file and the name of the class must match
+
+In Collection:
+1. Sorting objects:
+    Comparable(I) : to implement default natural sorting order.
+    Comparator(I): to implement customized sorting order.
+2. Getting objects one by one: - Cursors concept is required.
+    1. Enumeration(I)
+    2. Iterator(I)
+    3. ListIterator(I)
+3. Utility classes in Collection
+    1. Collections class - defines several utility methods for collection.
+    2. Arrays class - defines several utility methods for Array objects.
