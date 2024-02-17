@@ -1,4 +1,4 @@
-package web;
+package web.test;
 
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.*;
