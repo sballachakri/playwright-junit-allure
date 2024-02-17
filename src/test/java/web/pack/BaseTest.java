@@ -8,6 +8,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.nio.file.Paths;
+
 public abstract class BaseTest {
     static Playwright playwright;
     static Browser browser;
@@ -35,6 +37,19 @@ public abstract class BaseTest {
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(1920, 850));
         page = context.newPage();
+        page.navigate(baseUrl);
+
+// Save storage state into the file.
+        context.storageState(new BrowserContext.StorageStateOptions().setPath(Paths.get("state.json")));
+
+// Create a new context with the saved storage state.
+        BrowserContext context = browser.newContext(
+                new Browser.NewContextOptions().setStorageStatePath(Paths.get("state.json")));
+
+
+
+
+
 
     }
 

@@ -1,8 +1,12 @@
 package web.pack;
+import com.microsoft.playwright.BrowserContext;
 import config.ConfigLoader;
 import config.Configuration;
 import org.junit.jupiter.api.Test;
 import com.microsoft.playwright.Page;
+
+import java.nio.file.Paths;
+
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 class PostsBrowsingTests extends BaseTest {
@@ -11,8 +15,8 @@ class PostsBrowsingTests extends BaseTest {
     void shouldViewPostsOnHomePage() {
         System.out.println(baseUrl);
         page.navigate(baseUrl);
-        System.out.println(ConfigLoader.loadConfiguration().getSitUserEmail());
-        System.out.println(ConfigLoader.loadConfiguration().getSitPassword());
+//        System.out.println(ConfigLoader.loadConfiguration().getSitUserEmail());
+//        System.out.println(ConfigLoader.loadConfiguration().getSitPassword());
 
 
 //        int postsCount = page.locator(".alert").count();
