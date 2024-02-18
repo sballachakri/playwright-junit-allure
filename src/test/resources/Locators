@@ -1,0 +1,45 @@
+Page.getByRole() to locate by explicit and implicit accessibility attributes.
+Page.getByText() to locate by text content.
+Page.getByLabel() to locate a form control by associated label's text.
+Page.getByPlaceholder() to locate an input by placeholder.
+Page.getByAltText() to locate an element, usually image, by its text alternative.
+Page.getByTitle() to locate an element by its title attribute.
+Page.getByTestId() to locate an element based on its data-test-id attribute (other attributes can be configured).
+
+Page.getByRole()
+
+page.getByRole(AriaRole,HEADING, new page.GetByRoleOptions().setName("Sign up")));
+
+
+
+Set a custom test id attribute:
+
+By default, Page.getByTestId() will locate elements based on the data-testid attribute, but you can configure it in your test config or by calling Selectors.setTestIdAttribute().
+Set the test id to use a custom data attribute for your tests.
+playwright.selectors().setTestIdAttribute("data-test-id");
+In your html you can now use data-pw as your test id instead of the default data-testid.
+page.getByTestId("directions").click();
+
+Locate by CSS or XPath:
+
+page.locator("css=button").click();
+page.locator("xpath=//button").click();
+
+page.locator("button").click();
+page.locator("//button").click();
+
+
+LISTITEM
+page.getByRole(AriaRole.LISTITEM)
+    .filter(new Locator.FilterOptions().setHasText("Product 2"))
+    .getByRole(AriaRole.BUTTON,
+               new Page.GetByRoleOptions().setName("Add to cart"))
+    .click();
+
+assertThat(page.getByRole(AriaRole.LISTITEM).hasCount(3);
+
+
+
+Locator rows = page.getByRole(AriaRole.LISTITEM);
+Object texts = rows.evaluateAll(
+      "list => list.map(element => element.textContent)");

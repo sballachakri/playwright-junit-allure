@@ -1,6 +1,6 @@
 {
   "baseUrl": "https://www.evri.com/",
-  "headlessMode": false,
+  "headlessMode": true,
   "sloMo": 1000,
   "userEmail": "ballachakri@gmail.com",
   "password": "Khalifa123.",

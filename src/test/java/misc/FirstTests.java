@@ -1,4 +1,4 @@
-package web.test;
+package misc;
 
 import com.microsoft.playwright.*;
 
