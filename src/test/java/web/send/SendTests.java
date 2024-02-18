@@ -15,7 +15,7 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 @Tag("SendFlowTests")
-public class SendFlowTests extends BaseTest {
+public class SendTests extends BaseTest {
     @Test
     @Tags({@Tag("send"), @Tag("get-title")})
     @DisplayName("Get home page and assert title")
