@@ -1,8 +1,6 @@
 package web.send;
 
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
-import com.microsoft.playwright.options.AriaRole;
 import config.BaseTest;
 import config.ConfigLoader;
 import io.qameta.allure.Step;
@@ -13,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class AccountSettingsTests extends BaseTest {
+public class AccountTests extends BaseTest {
     @Test
     @Tags({@Tag("send"), @Tag("login")})
     @DisplayName("Login with user email and password")

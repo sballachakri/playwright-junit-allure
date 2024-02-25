@@ -1,0 +1,52 @@
+Date and Time API ( Joda Time PI is developed by Joda,org)
+
+before : Date, Calender, TimeStamp ... till 1.7 version.
+
+From : 1.8 version and over.
+Package it present is:   java.time.*;
+
+1. current local date/system date.
+LocalDate d=LocalDate.now();
+sout(l);
+
+2. current local time/system time.
+LocalTime t=LocalTime.time();
+sout(t);
+
+3. current local date, month, year, etc in customized format.
+LocalDate d=LocalDate.now();
+int dd=d.getDayOfMonth();
+int mm=d.getMonthValue();
+int yyyy=d.getYear();
+
+
+4. current local time, hour, minute, second, get nano., etc in customized format.
+LocalTime t=LocalTime.now();
+int h=t.getHour();
+int m=t.getMinute();
+int s=t.getSecond();
+int n=t.getNano();
+
+
+5. To handle current local date and time together
+LocalDateTime dt=LocalDateTime.now();
+sout(dt)
+int dd=dt.getDayOfMonth();
+int mm=dt.getMonthValue();
+int yyyy=dt.getYear();
+int h=dt.getHour();
+int m=dt.getMinute();
+int s=dt.getSecond();
+int n=dt.getNano();
+
+6. To handle an other any date based upon our requirement.
+LocalDateTime class contains several methods.
+LocalDateTime dt=LocalDateTime.of(yy,mm,dd,h.m,s,n);
+
+7. To handle prior date from current local date.
+LocalDate bdt=LocalDate.of(1974,10,16);
+LocalDate cdt=LocalDate.now();
+Period p=Period.between(bdt,cst);
+sout(p.getYears());
+sout(p.getMonths());
+sout(p.getDays());

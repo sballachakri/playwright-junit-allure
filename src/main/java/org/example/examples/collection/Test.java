@@ -1,20 +1,4 @@
-package org.example.examples.collections;
-//variables
-//int x=2;
-//x represents 2
-
-// Arrays
-//Student[] s=new Student[1000]
-//Limitations of Arrays
-//1. fixed in size = once arrays is declared we can't increase or decrease.
-//2. Arrays can hold homogeneous data types.
-//3. No underlying data structure - no ready made methods available to perform, eg: search an element in Array.
-
-//Collection - a group individuals objects
-// to overcome all the above Collection are used
-// Growable in nature
-// holds homogeneous and hetrogeneous data types
-// Standard data structure - ready made methods available
+package org.example.examples.collection;
 
 import java.util.ArrayList;
 import java.util.Iterator;

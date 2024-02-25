@@ -1,0 +1,14 @@
+interface: ( is also 100% pure abstract class ,  ** object cannot be created )
+1. if we know partial requirement implementation.
+2. every method is public and abstract methods even it is declared or not.
+3. we can't declare interface method with following
+public --> private,protected.
+abstract --> final, static,synchronized, native. strictfp.
+4. every variable are public,static and final even it is declared ot not.
+
+abstract class: ( ** object cannot be created)
+1. if do not know anything about requirement implementation.
+2. every method is abstract and concrete methods.
+3. The are no restrictions on abstract class methods
+4. every variable need not be public,static and final.
+

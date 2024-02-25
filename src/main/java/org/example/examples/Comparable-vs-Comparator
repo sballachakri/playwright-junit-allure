@@ -1,0 +1,10 @@
+Comparable(I): meant for default natural sorting order.
+java.lang pkg
+only contains one method
+implemented by all wrapper class and String class
+
+
+Comparator(I): customized sorting order.
+java.util pkg
+contains two methods compare() and equals()
+implemented by Collator and RuleBasedCollator

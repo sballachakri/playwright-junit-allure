@@ -1,0 +1,4 @@
+Math.random() -- always return 0 to 1 value;
+
+String[] st={"cat","dog","rat","fox"};
+int x= (int) (Math.random)*3+1;

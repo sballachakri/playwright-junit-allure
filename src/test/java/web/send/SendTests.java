@@ -8,9 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import config.BaseTest;
-
 import java.util.stream.Stream;
-
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -18,7 +16,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class SendTests extends BaseTest {
     @Test
     @Tags({@Tag("send"), @Tag("get-title")})
-    @DisplayName("Get home page and assert title")
+    @DisplayName("Navigate to send page")
     public void getTitle() {
         System.out.println(page.url());
         page.navigate(baseUrl + "send");
@@ -27,7 +25,6 @@ public class SendTests extends BaseTest {
         assertThat(page).hasTitle("Send a Parcel in the UK | Cheap Parcel Service | Evri");
     }
 
-    // @Test
     @ParameterizedTest
     @MethodSource("getParcelWeightBands")
     @Tags({@Tag("send"), @Tag("send-a-parcel")})
@@ -73,7 +70,6 @@ public class SendTests extends BaseTest {
 
     }
 
-    //Send a parcel
     @Step("Click 'send a parcel' button")
     public void clickSendAParcelButton() {
         Locator sendAParcelButton = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Get a price"));
@@ -89,15 +85,6 @@ public class SendTests extends BaseTest {
         embedScreenshot(page);
 
     }
-
-//    @Step("Reject all cookies")
-//    public void rejectCookies() {
-//        Locator reject = page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Reject all"));
-//        if (reject.isEnabled()) {
-//            reject.click();
-//            embedScreenshot(page);
-//        }
-//    }
 
     private static Stream<Arguments> getParcelWeightBands() {
         return Stream.of(

@@ -1,0 +1,38 @@
+1. Lambda expressions
+2. Functional Interfaces
+3. Default methods in interfaces
+4. Static methods in interfaces
+5. Predicate -- pre-defined default method.
+complusurey takes some input argument and returns boolean value only.
+Interface Predicate<T>{
+boolean test(T t)
+}
+6. Function<T,R> -- pre-defined default method
+complusurey take two input arguments and return and returns some value compulsory.
+ Interface Function<T,R>{
+ R apply(T t)
+ }
+7. Consumer -- pre-defined default method
+complusurey takes some input argument and do not return nothing.
+Interface Consumer<T>{
+ void accept(T t)
+ }
+8. Supplier -- pre-defined default method
+  it always won't take any input returns but takes return type and returns some value.
+ Interface Supplier<R>{
+  R get();
+  }
+9. for method reference & constructor reference
+(by double colon operator (::)
+10. Streams API
+11. Date & Time API ( introduced by Joda org, also called as joda API)
+
+
+
+1. Lambda expressions:
+    To enable functional programing in Java.
+    To write more readable, maintainable and concise code.
+    To use API's very easily and effectively.
+    To enable parallel processing.
+
+

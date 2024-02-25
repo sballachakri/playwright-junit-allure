@@ -14,6 +14,25 @@ package org.example.examples.interfaces;
 // example: for java application wants to communicate with Oracle db, we require some interface.i.e Driver - JDBC
 
 
-public class Test  {
+public class Test implements Service {
 
+    @Override
+    public void m1() {
+
+    }
+
+    @Override
+    public void m2() {
+
+    }
+
+    @Override
+    public void m3() {
+
+    }
+
+    @Override
+    public void m4() {
+
+    }
 }

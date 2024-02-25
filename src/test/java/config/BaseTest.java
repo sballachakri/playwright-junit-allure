@@ -61,7 +61,7 @@ public abstract class BaseTest {
         playwright.close();
     }
 
-    @Attachment
+    @Attachment()
     public byte[] embedScreenshot(Page page) {
         //return page.screenshot();
         return page.screenshot(new Page.ScreenshotOptions().setFullPage(true));

@@ -1,0 +1,56 @@
+Stream(I): if we want process objects from collection.
+
+Stream(I) interface is present in java.util pkg
+1. To create stream object.
+    Stream s=c.stream()
+
+2. To configure the stream
+
+    1. To filter - use filter(Predicate<T> t) method
+    2. To map - use map(Function<T,R) f) method
+3. To sort
+    1. collect()
+    2. count()
+    3. sorted(Comparator c)
+    4. min(Comparator c)
+    5. max(Comparator c)
+    6. forEach()
+4. To copy
+    1. toArray()
+
+** Stream can also be used to Arrays by using:
+    Stream.of()
+
+List l = new ArrayList();
+l.add(0);l.add(5);l.add(10);l.add(15);l.add(20);l.add(25);
+
+get and add all even number to the new list.
+
+    without streams
+    List<Integer> l1=new ArrayList<>();
+    for(Integer i:l)
+    {
+    if(i%2==0)
+    {
+    l.add(i);
+    }
+    }
+    sout(l1); // [0,10,20]
+
+    with streams
+    List<Integer> l1=new ArrayList<>();
+    l1=l.stream().filter( i -> i%2==0).collect(Collectors.tolist);
+    sout(l1); // [0,10,20,40,30.50];
+
+
+
+// get and double the value and add to new list
+
+  List<Integer> l1=l.stream().map( i -> i*2).collect(Collectors.tolist);
+    sout(l1); // [0,10,20];
+
+
+
+
+
+

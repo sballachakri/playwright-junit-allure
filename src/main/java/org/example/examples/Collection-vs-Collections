@@ -1,0 +1,5 @@
+Collection(I) : is an interface.
+Collections(C) : is a class.
+
+Collection(I): if we want to represent individual objects as a single entity then we go for collection
+Collections(C):  is utility class. Collections class defines methods for Collection objects.
